@@ -29,38 +29,33 @@ const Section = (): Node => {
 	const testString = 'WillHaveAnHyphenWhenBreakingForNewLine';
 	const testStringNormalSymbol = `WillHave${normalSoftSymbol}AnHyphen${normalSoftSymbol}When${normalSoftSymbol}Breaking${normalSoftSymbol}ForNew${normalSoftSymbol}Line`;
 	const testStringAndroidSymbol = `WillHave${androidSoftSymbol}AnHyphen${androidSoftSymbol}When${androidSoftSymbol}Breaking${androidSoftSymbol}ForNew${androidSoftSymbol}Line`;
-	const textBreakStrategy = 'simple'; // 'simple', 'highQuality', 'balanced'
 
 	return (
 		<View style={styles.sectionContainer}>
 			<Text
 				style={{backgroundColor: '#0f0'}}
-				android_hyphenationFrequency={'full'}
-				textBreakStrategy={textBreakStrategy}>
+				android_hyphenationFrequency={'full'}>
 				{testString}
 				{testStringNormalSymbol}
 				{testStringAndroidSymbol}
 			</Text>
 			<Text
 				style={{backgroundColor: '#f00'}}
-				android_hyphenationFrequency={'none'}
-				textBreakStrategy={textBreakStrategy}>
+				android_hyphenationFrequency={'none'}>
 				{testString}
 				{testStringNormalSymbol}
 				{testStringAndroidSymbol}
 			</Text>
 			<Text
 				style={{backgroundColor: '#00f'}}
-				android_hyphenationFrequency={'balanced'}
-				textBreakStrategy={textBreakStrategy}>
+				android_hyphenationFrequency={'balanced'}>
 				{testString}
 				{testStringNormalSymbol}
 				{testStringAndroidSymbol}
 			</Text>
 			<Text
 				style={{backgroundColor: '#0ff'}}
-				android_hyphenationFrequency={'high'}
-				textBreakStrategy={textBreakStrategy}>
+				android_hyphenationFrequency={'high'}>
 				{testString}
 				{testStringNormalSymbol}
 				{testStringAndroidSymbol}
